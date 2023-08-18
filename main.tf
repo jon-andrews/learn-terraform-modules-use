@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MPL-2.0
 
 provider "aws" {
-  region = "us-west-2"
+  region = "ap-southeast-2"
 
   default_tags {
     tags = {
@@ -34,7 +34,7 @@ module "ec2_instances" {
 
   name = "my-ec2-cluster"
 
-  ami                    = "ami-0c5204531f799e0c6"
+  ami                    = "ami-0a709bebf4fa9246f"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [module.vpc.default_security_group_id]
   subnet_id              = module.vpc.public_subnets[0]
